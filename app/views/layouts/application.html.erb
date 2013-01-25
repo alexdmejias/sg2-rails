@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+<!-- 	{{--
+		@if(!empty($view['title']))
+			{{ $this->viewVars['title_base'] }} {{ $this->viewVars['title_separator'] }} {{ $this->viewVars['title'] }}
+		@else
+			{{ $this->viewVars['title_base'] }}
+		@endif
+	--}} -->
+	</title>
+  	<%= stylesheet_link_tag    "application", :media => "all" %>
+  	<%= javascript_include_tag "application" %>
+  	<%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container_48">
+		<div id="header" class="grid_48">
+			<div class="grid_44 push_2">
+				<div id="logo" class="grid_16 alpha">
+					<a href="/"><img src="IMG/logo8.png" alt="greenserve logo" /></a>
+				</div>
+				<div id="nav" class="grid_26 push_2 omega">
+					<ul id="navlist">
+						<%= link_to "Why", why_path  %>
+						<%= link_to "Pledge", pledge_path %>
+						<%= link_to "Tips", tips_path %>
+						<%= link_to "About", about_path %>
+						<%= link_to "Blog", "https://greenserve.wordpress.com/" %>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--SPACER-->
+	<div class="container_48" id="spacer">
+		<div class="grid_44 push_2 spacer"></div>
+	</div>
+	<!--SPACER-->
+
+	<!-- {{ render('elements.slider') }} -->
+	slider content goes here
+
+	<!--SPACER-->
+	<div class="container_48" id="spacer">
+		<div class="grid_44 push_2 spacer"></div>
+	</div>
+	<!--SPACER-->
+
+	<%= yield %>
+
+	<!-- SPACER -->
+	<div class="container_48" id="spacer">
+		<div class="grid_44 push_2 spacer"></div>
+	</div>
+	<!-- SPACER -->
+
+	<div id="footer">
+		<div class="container_48">
+			<div id="footer_left" class="grid_14 push_2 alpha">
+				<h2>Site Map</h2>
+				<ul id="footer_nav">
+					<%= link_to 'Tips', tips_path %>
+					<%= link_to 'About Us', about_path %>
+					<%= link_to 'Why Do It', why_path %>
+					<%= link_to 'Pledge', pledge_path %>
+					<%= link_to 'Blog', 'https://greenserve.wordpress.com/' %>
+				</ul>
+			</div>
+			<div id="footer_middle" class="grid_14  push_1 ">
+				<h2>Recent News</h2>
+				<ul id="footer_news">
+				<!--populated dynamically by JS/feed.js-->
+				</ul>
+			</div>
+
+			<div id="footer_right" class="grid_14  push_4 omega">
+				<h2>Social Media</h2>
+				<div id="footer_social">
+					<div>
+						<a href="http://twitter.com/#!/Grnsrve"> <img src="IMG/media/twitter_32.png" width="32" height="32" alt="twitter icon" /></a>
+						<a href="http://www.facebook.com/pages/Greenserve/158651644197000"><img src="IMG/media/facebook_32.png" width="32" height="32" alt="facebook icon" /></a>
+						<a href="mailto:alme1304@gmail.com?subject=Greenserve"><img src="IMG/media/email_32.png" width="32" height="32" alt="contact us icon" /></a>
+						<a href="https://greenserve.wordpress.com/feed/"><img src="IMG/media/rss_32.png" width="32" height="32" alt="rss feed icon" /></a>
+					</div>
+				 </div>
+			</div>
+		</div>
+	</div>
+	<!-- {{ Asset::container('footer')->scripts() }} -->
+</body>
+</html>
