@@ -5,7 +5,7 @@
 }
 
 body {
-	background: url(../img/bg-23.jpg) repeat bottom;
+	background: url(/images/bg-23.jpg) repeat bottom;
 	font-family: $body_par;
 	min-height: 965px;
 	height: 100%;
@@ -49,7 +49,7 @@ a {
 
 .spacer {
 	height: 30px;
-	background: url(../img/lines-25.png) repeat-x center center;
+	background: url(/images/lines-25.png) repeat-x center center;
 }
 
 .power { background-color: $power; }
@@ -135,7 +135,7 @@ a {
 		left: 0;
 		padding: 0 5% 20px 5%;
 		ul {
-			list-style-image: url('../img/bullets-01.jpg');
+			list-style-image: url('/images/bullets-01.jpg');
 		}
 		#content-top {
 			blockquote {
@@ -284,7 +284,7 @@ a {
 		ul {
 			margin-left: 20px;
 			color: #009999;
-			list-style-image: url('../img/bullets-01.jpg');
+			list-style-image: url('/images/bullets-01.jpg');
 
 			li {
 				margin-bottom: 17px;
@@ -413,7 +413,7 @@ a {
 	#ajax-call {
 		width: 100%;
 		background: #000;
-		background: url('../img/ajax-loader.gif') no-repeat scroll center center;
+		background: url('/images/ajax-loader.gif') no-repeat scroll center center;
 		height: 300px;
 	}
 }
