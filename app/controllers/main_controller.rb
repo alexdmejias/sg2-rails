@@ -11,6 +11,4 @@ class MainController < ApplicationController
   def pledge
   end
 
-  def tips
-  end
 end

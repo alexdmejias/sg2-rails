@@ -6,9 +6,12 @@ Sg2Rails::Application.routes.draw do
   match '/' => 'main#index'
   match 'why' => 'main#why'
   match 'pledge' => 'main#pledge'
-  match 'tips' => 'main#tips'
   match 'about' => 'main#about'
 
+  match 'tips' => 'tips#index'
+  match 'new' => 'tips#new'
+
+  resources :tips
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -21,7 +24,6 @@ Sg2Rails::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
 
   # Sample resource route with options:
   #   resources :products do
