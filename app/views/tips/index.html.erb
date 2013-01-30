@@ -2,15 +2,28 @@
 	<div  class="grid_48">
 		<div id="content" class="grid_44 push_2"><!--actual content-->
 			<div id="main-left" class="grid_20 push_1 alpha"><!--Left main content -->
-				<table border="1">
+				<%= link_to "new Tip",  new_tip_path %>
+				<table>
 					<tr>
 						<th>id</th>
 						<th>name</th>
 						<th>category</th>
-						<th>difficulty</th>
-						<th>desc</th>
-						<th>cost</th>
+						<th>created at</th>
+						<th></th>
+						<th></th>
+						<th></th>
 					</tr>
+					<% @tips.each do |t| %>
+						<tr>
+							<td><%= t.id %></td>
+							<td><%= t.name %></td>
+							<td><%= t.category.name %></td>
+							<td><%= t.created_at %></td>
+							<td><%= link_to 'show', t %></td>
+							<td><%= link_to 'edit', edit_tip_path(t) %></td>
+							<td><%= link_to 'delete', t, method: :delete, data: { confirm: 'are you sure' }  %></td>
+						</tr>
+					<% end %>
 				</table>
 			</div>
 			<div id="main-right" class="grid_21 push_3 omega">

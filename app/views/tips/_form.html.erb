@@ -1,24 +1,19 @@
-<%= form_for(@tip) do |t| %>
-  <% if @tip.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
+<%= form_for(@tip) do |t|  %>
+	<% if @tip.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
+			<ul>
+				<% @tip.errors.full_messages.each do |msg| %>
+					<li><%= @msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<%= t.label :name %>
+	<%= t.text_field :name %>
 
-      <ul>
-      <% @tip.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<%= t.label :category %>
+	<%= t.collection_select(:category_id, Category.find(:all), :id, :name, {:include_blank => 'Please Select A Color'}) %>
 
-  <%= t.label :name %>
-  <%= t.text_field :name %>
-
-  <%= t.label :slug %>
-  <%= t.text_field :slug %>
-
-  <div class="actions">
-    <%= t.submit %>
-  </div>
+	<%= t.submit "submit" %>
 <% end %>
-<%= link_to 'tips', tips_path %>

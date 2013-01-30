@@ -1,10 +1,10 @@
 Sg2Rails::Application.routes.draw do
+  root :to => 'main#index'
+
   match '/' => 'main#index'
   match 'why' => 'main#why'
   match 'pledge' => 'main#pledge'
   match 'about' => 'main#about'
-
-  match 'tips' => 'tips#index'
 
   resources :tips
   resources :categories
@@ -56,7 +56,6 @@ Sg2Rails::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'main#index'
 
   # See how all your routes lay out with "rake routes"
 
