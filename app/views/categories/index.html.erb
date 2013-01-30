@@ -1,0 +1,32 @@
+<div  class="container_48">
+	<div  class="grid_48">
+		<div id="content" class="grid_44 push_2"><!--actual content-->
+			<div id="main-left" class="grid_20 push_1 alpha"><!--Left main content -->
+				<table>
+					<tr>
+						<th>id</th>
+						<th>name</th>
+						<th>slug</th>
+						<th>created at</th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+					<% @categories.each do |c| %>
+						<tr>
+							<td><%= c.id %></td>
+							<td><%= c.name %></td>
+							<td><%= c.slug %></td>
+							<td><%= c.created_at %></td>
+							<td><%= link_to 'show', c %></td>
+							<td><%= link_to 'edit', edit_category_path(c) %></td>
+							<td><%= link_to 'delete', c, method: :delete, data: { confirm: 'are you sure' }  %></td>
+						</tr>
+					<% end %>
+				</table>
+			</div>
+			<div id="main-right" class="grid_21 push_3 omega">
+			</div>
+		</div>
+	</div>
+</div>

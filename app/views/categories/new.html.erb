@@ -2,18 +2,11 @@
 	<div  class="grid_48">
 		<div id="content" class="grid_44 push_2"><!--actual content-->
 			<div id="main-left" class="grid_20 push_1 alpha"><!--Left main content -->
-				<table border="1">
-					<tr>
-						<th>id</th>
-						<th>name</th>
-						<th>category</th>
-						<th>difficulty</th>
-						<th>desc</th>
-						<th>cost</th>
-					</tr>
-				</table>
+				<h1>New Category</h1>
+				<%= render 'form' %>
 			</div>
 			<div id="main-right" class="grid_21 push_3 omega">
+				<%= link_to 'show categories', categories_path %>
 			</div>
 		</div>
 	</div>

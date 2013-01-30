@@ -6,7 +6,7 @@
 #  name        :string(255)
 #  category    :integer
 #  difficulty  :integer
-#  description :text
+#  description :string(255)
 #  cost        :string(255)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
