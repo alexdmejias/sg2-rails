@@ -53,6 +53,7 @@ a {
 }
 
 .power { background-color: $power; }
+.electricity { background-color: $power; }
 .water { background-color: $water; }
 .paper { background-color: $paper; }
 .white { background-color: $white; }
@@ -276,7 +277,7 @@ a {
 			margin-bottom: 50px;
 		}
 		.tip_body {
-			display: none;
+			// display: none;
 		}
 		a {
 			font-family: $serif;

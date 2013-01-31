@@ -7,6 +7,9 @@
 #  category_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  difficulty  :integer
+#  description :string(255)
+#  cost        :string(255)
 #
 
 require 'test_helper'
