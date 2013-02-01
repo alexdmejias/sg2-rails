@@ -17,4 +17,8 @@ class Tip < ActiveRecord::Base
 
   belongs_to :category
 
+  # after_save do |tip|
+  # 	tip.diffilty_word = "hard"
+  # end
+
 end

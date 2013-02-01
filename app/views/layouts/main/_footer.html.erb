@@ -1,0 +1,34 @@
+	<div id="footer">
+		<div class="container_48">
+			<div id="footer_left" class="grid_14 push_2 alpha">
+				<h2>Site Map</h2>
+				<ul id="footer_nav">
+					<li><%= link_to 'Tips', tips_path %></li>
+					<li><%= link_to 'About Us', about_path %></li>
+					<li><%= link_to 'Why Do It', why_path %></li>
+					<li><%= link_to 'Pledge', pledge_path %></li>
+					<li><%= link_to 'Blog', 'https://greenserve.wordpress.com/' %></li>
+				</ul>
+			</div>
+			<div id="footer_middle" class="grid_14  push_1 ">
+				<h2>Recent News</h2>
+				<ul id="footer_news">
+				<!--populated dynamically by JS/feed.js-->
+				</ul>
+			</div>
+
+			<div id="footer_right" class="grid_14  push_4 omega">
+				<h2>Social Media</h2>
+				<div id="footer_social">
+					<div>
+						<%= link_to image_tag("media/twitter_32.png", :size => "32x32", :alt => "twitter icon"), "http://twitter.com/#!/Grnsrve" %>
+						<%= link_to image_tag("media/facebook_32.png", :size => "32x32", :alt => "facebook icon"), "http://www.facebook.com/pages/Greenserve/158651644197000" %>
+						<%= link_to image_tag("media/email_32.png", :size => "32x32", :alt => "email icon"), "mailto:alme1304@gmail.com?subject=Greenserve" %>
+						<%= link_to image_tag("media/rss_32.png", :size => "32x32", :alt => "rss icon"), "https://greenserve.wordpress.com/feed/" %>
+					</div>
+				 </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
