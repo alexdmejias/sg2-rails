@@ -17,6 +17,9 @@ class Tip < ActiveRecord::Base
 
   belongs_to :category
 
+  validates :name, presence: true, uniqueness: true
+
+
   # after_save do |tip|
   # 	tip.diffilty_word = "hard"
   # end

@@ -1,0 +1,19 @@
+<div class="tip_whole dark">
+	<div class="tip_header">
+		<a name="submit"></a>
+		<h3 class="tip_title">Send us a tip</h3>
+	</div>
+	<div class="tip_body">
+		<p>Did we miss something? Send us your energy saving tips</p>
+		<form action="php/submit_tip.php" method="post" id="submit_tip_form">
+			<fieldset>
+				<label for="name">Email: </label><br /><input type="text" id="submit_email" name="submit_email" value="Your email"/>
+				<br />
+				<label for="submit_tip">Your Tip: </label>
+				<textarea rows="4" cols="50" id="submit_tip" name="submit_tip">Enter your tip here.</textarea>
+				<br />
+				<input type="submit" value="Send us your tip" name="submit" id="submit"/>
+			</fieldset>
+		</form>
+	</div>
+</div>
