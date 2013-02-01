@@ -6,7 +6,7 @@
 					<li id="all"><a href="#">View All</a></li>
 					<li id="easy"><a href="#">No-Cost Tips</a></li>
 					<li id="medium"><a href="#">Low-Cost Tips</a></li>
-					<li id="hard"><a href="#">Investments</a></li>
+					<li id="investment"><a href="#">Investments</a></li>
 					<li id="water"><a href="#">Water Tips</a></li>
 					<li id="power"><a href="#">Electricity Tips</a></li>
 					<li id="paper"><a href="#">Paper Tips</a></li>
@@ -14,30 +14,7 @@
 				<div class="tip_container">
 					<%= link_to "new Tip",  new_tip_path %>
 					<% @tips.each do |t| %>
-						<div class="tip_whole <%= t.category.slug %>">
-							<div class="tip_header">
-								<h5 class="tip_title">
-									<b><%= t.name %></b> - <%= t.difficulty %> <%= link_to "edit", edit_tip_path(t) %> || <%= link_to "delete", t, method: :delete, data: { confirm: 'are you sure'} %>
-								</h5>
-								<div class="tip_social">
-								</div>
-							</div>
-							<div class="tip_body">
-								<div class="grid_20 alpha">
-									<p class="tip_desc"><%= t.description %></p>
-									<% if t.links? %>
-										<div class="tip_links">
-											<h5>More information</h5>
-											<a href="{{url}}" class="tip_link" target="_blank">{{title}}</a>
-										</div>
-									<% end %>
-								</div>
-								<div class="grid_19 push_2">
-									<h2 class="tip_cost_title">Avg. Cost to Implement</h2>
-									<h1 class="tip_cost_title"><%= t.cost %></h1>
-								</div>
-							</div>
-						</div>
+						<%= render 'tips/partials/single_tip', :single_tip => t %>
 					<% end %>
 				</div>
 				<div class="tip_whole dark">
