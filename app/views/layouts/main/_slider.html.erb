@@ -1,32 +1,38 @@
 <div class="container_48">
 	<div class="grid_48 push_2">
 		<div id="banner" class="grid_44">
-			<div id="lofslidecontent45" class="lof-slidecontent" style="width:880px; height:280px;">
-				<div class="preload">
-					<div></div>
-				</div>
-				<div class="lof-main-outer" style="width:880px; height:280px;">
-					<ul class="lof-main-wapper">
-						<li>
-							<img src="img/slide/main/1.jpg" title="" />
-							<div class="lof-main-item-desc">
-								<h1><a href="#">&nbsp;Here to teach you<br/>  &nbsp;how to save <b>money</b><br/> &nbsp;and the <b>planet.</b></a></h1>
-								{{--<'.$title_size.'><a href="'.$link_loc.'">'.$title_1.'</a></'.$title_size.'>--}}
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="lof-navigator-wapper">
-					<div class="lof-navigator-outer">
-						<ul class="lof-navigator">
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
+			<ul>
+				<li class="first">
+					<%= image_tag("slider/main/1.jpg") %>
+					<div class="image_text">
+						<a href="#"><h1>Here to teach you<br/>how to save <b>money</b><br/>and the <b>planet.</b></h1></a>
 					</div>
-				</div>
-			</div>
+				</li>
+				<li class="two">
+					<%= image_tag("slider/main/2.jpg") %>
+					<div class="image_text">
+						<h1><a href="#">&nbsp;Here to teach you<br/>  &nbsp;how to save <b>money</b><br/> &nbsp;and the <b>planet.</b></a></h1>
+					</div>
+				</li>
+				<li class="third">
+					<%= image_tag("slider/main/3.jpg") %>
+					<div class="image_text">
+						<h1><a href="#">&nbsp;Here to teach you<br/>  &nbsp;how to save <b>money</b><br/> &nbsp;and the <b>planet.</b></a></h1>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
+
+<script>
+	var ul = $('#banner ul');
+
+	$('#banner ul li').off().on('click',function() {
+		$('#banner ul li').animate({
+			right: '+=880'
+			}, 1000, function() {
+			$('#banner ul li:first').css('right', ($('#banner ul li').length - 1) * 880).appendTo($('#banner ul'));
+		});
+	});
+</script>

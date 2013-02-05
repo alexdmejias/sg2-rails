@@ -13,7 +13,7 @@
 	<%= t.text_field :name %>
 
 	<%= t.label :category %>
-	<%= t.collection_select(:category_id, Category.find(:all), :id, :name, {:include_blank => 'Please Select A Category'}) %>
+	<%= t.collection_select(:category, Category.find(:all), :id, :name, {:include_blank => 'Please Select A Category'}) %>
 
 	<%= t.label :difficulty %>
 	<%= t.select :difficulty, (1..5) %>
