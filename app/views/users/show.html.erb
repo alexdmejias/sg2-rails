@@ -1,25 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div  class="container_48">
+  <div  class="grid_48">
+    <div id="content" class="grid_44 push_2"><!--actual content-->
+      <div id="main-left" class="grid_44 alpha"><!--Left main content -->
+      	<p id="notice"><%= notice %></p>
+    		<p>
+    		  <b>Name:</b>
+    		  <%= @user.name %>
+    		</p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Display name:</b>
-  <%= @user.display_name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-
-<p>
-  <b>Password digest:</b>
-  <%= @user.password_digest %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+    		<p>
+    		  <b>Password digest:</b>
+    		  <%= @user.password_digest %>
+    		</p>
+    		<%= link_to 'Edit', edit_user_path(@user) %> |
+    		<%= link_to 'Back', users_path %>
+      </div> <!--end left main content -->
+    </div>  <!-- end actual content -->
+  </div>
+</div>
