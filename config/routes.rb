@@ -1,16 +1,7 @@
 Sg2Rails::Application.routes.draw do
-  resources :users
-
-
   root :to => 'main#index'
-
-  match '/' => 'main#index'
-  match 'why' => 'main#why'
-  match 'pledge' => 'main#pledge'
-  match 'about' => 'main#about'
-
-  resources :tips
-  resources :categories
+  resources :tips, :categories, :users
+  match '/:action', :controller => 'main', :only => [:why, :pledge, :about]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
