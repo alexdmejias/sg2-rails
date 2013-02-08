@@ -24,7 +24,7 @@
 </div>
 <script>
 (function(){
-	var cont = $('.tip_container');
+	var cont = $('#main-left');
 
 	function remove_tips(exception) {
 		$('.tip_whole', cont).not("." + exception ).hide();
@@ -35,7 +35,7 @@
 		id = $(this).attr('id');
 		$("." + id, cont).show()
 		remove_tips(id);
-	})
+	});
 
 	$('#all').on('click', function(e){
 		e.preventDefault();
@@ -43,8 +43,14 @@
 		$('.tip_body', cont).addClass('open');
 	});
 
-	$('.tip_whole', cont).on('click', function() {
-		$(this).children('.tip_body').toggleClass('open');
+	$('.tip_header', cont).on('click', function() {
+		if(!$('.tip_body').hasClass('open')) {
+			$(this).next().addClass('open').end().children('h5').append('<a class="close">(close)</a>');
+		}
 	});
+
+	$(cont).on('click', 'a.close',function(){
+		$(this).parents('.tip_header').next().removeClass('open').end().end().remove();
+	})
 })();
 </script>

@@ -15,11 +15,7 @@
 	a {
 		text-decoration:none;
 
-		&:link {
-			color:#000;
-		}
-
-		&:visited {
+		&:link, &:visited {
 			color:#000;
 		}
 
@@ -56,18 +52,18 @@
 
 .tip_body {
 	padding-left:10px;
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	-ms-transition: all 1s;
-	-o-transition: all 1s;
-	transition: all 1s;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
 	height: 0;
 	overflow: hidden;
 }
 
 .tip_body.open {
 	border-top:#FFF thin solid;
-	height: 200px;
+	height: 150px;
 	padding-top: 20px;
 }
 
