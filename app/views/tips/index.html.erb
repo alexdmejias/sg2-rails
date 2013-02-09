@@ -12,7 +12,6 @@
 					<li id="paper"><a href="#">Paper Tips</a></li>
 				</ul>
 				<div class="tip_container">
-					<%= link_to "new Tip",  new_tip_path %>
 					<% @tips.each do |t| %>
 						<%= render 'tips/partials/single_tip', :single_tip => t %>
 					<% end %>

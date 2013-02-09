@@ -8,7 +8,10 @@ Sg2Rails::Application.routes.draw do
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  match '/:action', :controller => 'main', :only => [:why, :pledge, :about]
+  # match '/:action', :controller => 'main', :only => [:why, :pledge, :about]
+  match 'why' => 'main@why'
+  match 'pledge' => 'main@pledge'
+  match 'about' => 'main@about'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

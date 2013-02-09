@@ -13,3 +13,7 @@ todolist
 - [ ] add graphs
 - [ ] put all the tips back
 - [ ] individual pages for tips with more details
+- [ ] fix api issues
+- [ ] fix pledge
+- [ ] make it so tips go into a pending area if they are suggested
+- [ ] push footer all the way to the bottom
